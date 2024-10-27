@@ -6,6 +6,8 @@ class User {
     String password
     String bio
 
+    static hasMany = [testimonials: Testimonial]
+
     static constraints = {
         name nullable: false, blank: false
         email nullable: false, blank: false

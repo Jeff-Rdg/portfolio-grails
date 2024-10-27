@@ -11,8 +11,6 @@ class Project {
 
     static hasMany = [technologies: String]
 
-
-
     static constraints = {
         title nullable: false, blank: false
         description nullable: true, blank: true

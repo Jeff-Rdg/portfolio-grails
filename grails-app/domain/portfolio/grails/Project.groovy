@@ -10,6 +10,7 @@ class Project {
     @ElementCollection List<String> technologies
 
     static hasMany = [technologies: String]
+    static hasOne = [user: User]
 
     static constraints = {
         title nullable: false, blank: false

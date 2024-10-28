@@ -5,8 +5,7 @@ class Certificate {
     String issuer
     Date date
     String description
-
-    static hasOne = [user: User]
+    User user
 
     static constraints = {
         title nullable: false, blank: false

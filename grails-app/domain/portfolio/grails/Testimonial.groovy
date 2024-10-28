@@ -1,7 +1,7 @@
 package portfolio.grails
 
 class Testimonial {
-    String name = "Anônimo"
+    String name
     String position
     String message
 
@@ -11,5 +11,11 @@ class Testimonial {
         name nullable: true, blank: true
         position nullable: false, blank: false
         message nullable: false, blank: false
+    }
+
+    def beforeInsert() {
+        if (!name) {
+            name = "Anônimo"
+        }
     }
 }

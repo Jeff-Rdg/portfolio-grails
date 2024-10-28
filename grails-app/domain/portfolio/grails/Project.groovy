@@ -1,16 +1,12 @@
 package portfolio.grails
 
-import javax.persistence.ElementCollection
-
 class Project {
     String title
     String description
     String repositoryLink
     String demoLink
-    @ElementCollection List<String> technologies
-
-    static hasMany = [technologies: String]
-    static hasOne = [user: User]
+    User user
+    String technologies
 
     static constraints = {
         title nullable: false, blank: false
@@ -18,9 +14,5 @@ class Project {
         repositoryLink nullable: false, blank: false
         demoLink nullable: true, blank: true
         technologies nullable: true
-    }
-
-    static mapping = {
-        technologies joinTable: false
     }
 }

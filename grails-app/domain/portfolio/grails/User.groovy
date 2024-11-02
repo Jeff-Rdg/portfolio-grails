@@ -20,6 +20,7 @@ class User {
     }
 
     static mapping = {
+        table 'app_user'
         bio type: "text"
     }
 }
